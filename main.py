@@ -1,9 +1,11 @@
-print("Welcome to the a recommendation program")
+print("---- Welcome to the a recommendation program ---- \n")
 
 response_user = []
 
+# asking user and collect information
+
 print("1) what your favorite movie genre ? \n (a) action \n (b) romantic \n (c) science fiction \n (d) horror \n \n ")
-response_user.append(input("your answer is :"))
+response_user.append(input("your answer is : "))
 
 print("1) what your favorite game genre ? \n (a) racing \n (b) puzzle \n (c) adventure \n (d) sport \n \n ")
 response_user.append(input("your answer is :"))
@@ -16,6 +18,8 @@ response_user.append(input("your answer is :"))
 
 print("1) what your favorite activities genre ? \n (a) travel \n (b) sport \n (c) learning \n (d) reading \n \n ")
 response_user.append(input("your answer is :"))
+
+# analyze information
 
 movies = {'action_1': 'Black Adam', 'action_2': 'Uncharted', 'romantic_1': 'The Vow', 'romantic_2': 'Adrift',
           'science_fiction_1': 'Tenet', 'science_fiction_2': 'Inception', 'horror_1': 'It', 'horror_2': 'Orphan'}
@@ -31,12 +35,17 @@ places = {'nature_1': 'Desert Sand Dunes in south africa', 'nature_2': 'Everest 
 activities = {'travel_1': 'dead sea in jordan', 'travel_2': 'ibiza in spain', 'sport_1': 'Ralley dakar',
               'sport_2': 'skating', 'learning_1': 'new language', 'learning_2': 'how to cook',
               'reading_1': 'and then there were none', 'reading_2': 'crooked house'}
+
 question_genre = ['movies', 'games', 'songs', 'places', 'activities']
 
 print(response_user)
+
 for i in range(5):
     print("Maybe you would like")
-    if response_user[i] == 'a':
+
+# If the user choose A
+
+    if response_user[i].lower() == 'a':
         if question_genre[i] == 'movies':
             print(question_genre[i], ': \n 1- ', movies["action_1"], ' \n 2- ', movies["action_2"])
         elif question_genre[i] == 'games':
@@ -47,7 +56,10 @@ for i in range(5):
             print(question_genre[i], ': \n 1-', places["nature_1"], '\n 2-', places["nature_2"])
         elif question_genre[i] == 'activities':
             print(question_genre[i], ': \n 1-', activities["travel_1"], '\n 2-', activities["travel_2"])
-    elif response_user[i] == 'b':
+
+# If the user choose B
+
+    elif response_user[i].lower() == 'b':
         if question_genre[i] == 'movies':
             print(question_genre[i], ': \n 1- ', movies["romantic_1"], ' \n 2- ', movies["romantic_2"])
         elif question_genre[i] == 'games':
@@ -58,7 +70,10 @@ for i in range(5):
             print(question_genre[i], ': \n 1-', places["museum_1"], '\n 2-', places["museum_2"])
         elif question_genre[i] == 'activities':
             print(question_genre[i], ': \n 1-', activities["sport_1"], '\n 2-', activities["sport_2"])
-    elif response_user[i] == 'c':
+
+# If the user choose C
+
+    elif response_user[i].lower() == 'c':
         if question_genre[i] == 'movies':
             print(question_genre[i], ': \n 1- ', movies["science_fiction_1"], ' \n 2- ', movies["science_fiction_2"])
         elif question_genre[i] == 'games':
@@ -69,7 +84,10 @@ for i in range(5):
             print(question_genre[i], ': \n 1-', places["beach_1"], '\n 2-', places["beach_2"])
         elif question_genre[i] == 'activities':
             print(question_genre[i], ': \n 1-', activities["learning_1"], '\n 2-', activities["learning_2"])
-    elif response_user[i] == 'd':
+
+# If the user choose D
+
+    elif response_user[i].lower() == 'd':
         if question_genre[i] == 'movies':
             print(question_genre[i], ': \n 1- ', movies["horror_1"], ' \n 2- ', movies["horror_2"])
         elif question_genre[i] == 'games':
