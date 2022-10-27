@@ -5,7 +5,7 @@ response_user = []
 # asking user and collect information
 
 print("1) what your favorite movie genre ? \n (a) action \n (b) romantic \n (c) science fiction \n (d) horror \n \n ")
-response_user.append(input("your answer is : "))
+response_user.append(input("your answer is :"))
 
 print("1) what your favorite game genre ? \n (a) racing \n (b) puzzle \n (c) adventure \n (d) sport \n \n ")
 response_user.append(input("your answer is :"))
@@ -41,7 +41,7 @@ question_genre = ['movies', 'games', 'songs', 'places', 'activities']
 print(response_user)
 
 for i in range(5):
-    print("Maybe you would like")
+    print("We would like also to recommend these")
 
 # If the user choose A
 
@@ -99,4 +99,4 @@ for i in range(5):
         elif question_genre[i] == 'activities':
             print(question_genre[i], ': \n 1-', activities["reading_1"], '\n 2-', activities["reading_2"])
     else:
-        print('Sorry you entering a choice that not exist')
+        print("but unfortunately you didn't tell us what you prefer")
